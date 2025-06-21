@@ -1,9 +1,8 @@
 import { AddPhotoAlternate, Close } from '@mui/icons-material'
 import { Alert, Button, CircularProgress, FormControl, FormHelperText, Grid, IconButton, InputLabel, MenuItem, Select, Snackbar, TextField } from '@mui/material'
 import { useFormik } from 'formik'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { uploadToCloudinary } from '../../../Util/uploadToCloudinary'
-import * as Yup from 'yup';
 import { colors } from '../../../Data/Filter/color'
 import { mainCategory } from '../../../Data/category/mainCategory'
 import { menLevelTwo } from '../../../Data/category/level two/menLevelTwo'
@@ -14,7 +13,6 @@ import { menLevelThree } from '../../../Data/category/level three/menLevelThree'
 import { womenLevelThree } from '../../../Data/category/level three/womenLevelThree'
 import { furnitureLevelThree } from '../../../Data/category/level three/furnitureLevelThree'
 import { electronicsLevelThree } from '../../../Data/category/level three/electronicsLevelThree'
-import { useDispatch } from 'react-redux'
 import { createProduct } from '../../../State/seller/sellerProductSlice'
 import { useAppDispatch, useAppSelector } from '../../../State/Store'
 
@@ -38,29 +36,29 @@ const categoryThree: { [key: string]: any[] } = {
 };
 
 
-const validationSchema = Yup.object({
-  title: Yup.string()
-    .min(5, "Title should be at least 5 characters long")
-    .required("Title is required"),
-  description: Yup.string()
-    .min(10, "Description should be at least 10 characters long")
-    .required("Description is required"),
-  mrpPrice: Yup.number()
-    .positive("Price should be greater than zero")
-    .required("Price is required"),
-  discountedPrice: Yup.number()
-    .positive("Discounted Price should be greater than zero")
-    .required("Discounted Price is required"),
-  discountPercent: Yup.number()
-    .positive("Discount Percent should be greater than zero")
-    .required("Discount Percent is required"),
-  quantity: Yup.number()
-    .positive("Quantity should be greater than zero")
-    .required("Quantity is required"),
-  color: Yup.string().required("Color is required"),
-  category: Yup.string().required("Category is required"),
-  sizes: Yup.string().required("Sizes are required"),
-})
+// const validationSchema = Yup.object({
+//   title: Yup.string()
+//     .min(5, "Title should be at least 5 characters long")
+//     .required("Title is required"),
+//   description: Yup.string()
+//     .min(10, "Description should be at least 10 characters long")
+//     .required("Description is required"),
+//   mrpPrice: Yup.number()
+//     .positive("Price should be greater than zero")
+//     .required("Price is required"),
+//   discountedPrice: Yup.number()
+//     .positive("Discounted Price should be greater than zero")
+//     .required("Discounted Price is required"),
+//   discountPercent: Yup.number()
+//     .positive("Discount Percent should be greater than zero")
+//     .required("Discount Percent is required"),
+//   quantity: Yup.number()
+//     .positive("Quantity should be greater than zero")
+//     .required("Quantity is required"),
+//   color: Yup.string().required("Color is required"),
+//   category: Yup.string().required("Category is required"),
+//   sizes: Yup.string().required("Sizes are required"),
+// })
 
 const AddProduct = () => {
 
@@ -160,10 +158,9 @@ const AddProduct = () => {
 
             <div className='flex flex-wrap gap-2'>
               {formik.values.images.map((image, index) =>(
-               <div className='relative'>
+               <div key={index} className='relative'>
                 <img
                  className='w-24 h-24 object-cover'
-                 key={index} 
                  src={image}
                  alt={`ProductImage ${index+1}`}
                 />
@@ -261,7 +258,7 @@ const AddProduct = () => {
                   <em>None</em>
                 </MenuItem>
 
-                {colors.map((color, index) => <MenuItem value={color.name}>
+                {colors.map((color,index) => <MenuItem key={index} value={color.name}>
                   <div className="flex gap-3">
                     <span style={{ backgroundColor: color.hex }} className={`h-5 w-5 rounded-full ${color.name === "White" ? "border" : ""}`}></span>
                     <p>{color.name}</p>
@@ -319,8 +316,8 @@ const AddProduct = () => {
                 label="Category"
               >
                 {/* <MenuItem value=""><em>None</em></MenuItem> */}
-                {mainCategory.map((item) => (
-                  <MenuItem value={item.categoryId}>{item.name}</MenuItem>
+                {mainCategory.map((item,index) => (
+                  <MenuItem key={index} value={item.categoryId}>{item.name}</MenuItem>
                 ))}
               </Select>
               {formik.touched.category && formik.errors.category && (
@@ -344,8 +341,8 @@ const AddProduct = () => {
                 label="Second Category"
               >
                 {formik.values.category &&
-                  categoryTwo[formik.values.category]?.map((item) => (
-                    <MenuItem value={item.categoryId}>{item.name}</MenuItem>
+                  categoryTwo[formik.values.category]?.map((item,index) => (
+                    <MenuItem key={index} value={item.categoryId}>{item.name}</MenuItem>
                   ))}
               </Select>
               {formik.touched.category && formik.errors.category && (

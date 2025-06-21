@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { HomeCategory } from '../../../../types/HomeCategoryTypes'
 import { useNavigate } from 'react-router-dom'
 

@@ -43,14 +43,7 @@ const orderStatus = [
   { color: "#32CD32", label: "DELIVERED" },
   { color: "#FF0000", label: "CANCELLED" },
 ];
-const orderStatusColor = {
-  PENDING: { color: "#FFA500", label: "PENDING" }, // Orange
-  CONFIRMED: { color: "#F5BCBA", label: "CONFIRMED" },
-  PLACED: { color: "#F5BCBA", label: "PLACED" },
-  SHIPPED: { color: "#1E90FF", label: "SHIPPED" }, // DodgerBlue
-  DELIVERED: { color: "#32CD32", label: "DELIVERED" }, // LimeGreen
-  CANCELLED: { color: "#FF0000", label: "CANCELLED" }, // Red
-};
+
 
 const OrderTable = () => {
   //-------------------------------------------------------

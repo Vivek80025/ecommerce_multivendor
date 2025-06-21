@@ -4,7 +4,7 @@ import { Product } from "../../types/ProductType";
 
 export const fetchSellerProduct = createAsyncThunk<Product[],any>(
   "sellerProduct/fetchSellerProduct",
-  async(jwt, {rejectWithValue})=>{
+  async(jwt)=>{
     try{
       const response = await api.get("/sellers/products",{
         headers: {
@@ -23,7 +23,7 @@ export const fetchSellerProduct = createAsyncThunk<Product[],any>(
 
 export const createProduct=createAsyncThunk<Product,{request:any , jwt:string | null}>(
   "sellerProduct/createProduct",
-  async(args, {rejectWithValue})=>{
+  async(args)=>{
     const {request, jwt} = args;
     try{
       const response=await api.post("/sellers/products",request,{

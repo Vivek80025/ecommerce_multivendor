@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+
 import ProfileFieldCard from "../../../component/ProfileFieldCard";
 import { Divider } from "@mui/material";
-import store, { useAppSelector } from "../../../State/Store";
+import { useAppSelector } from "../../../State/Store";
 
 const UserDetails = () => {
   const {auth} = useAppSelector(store=>store);

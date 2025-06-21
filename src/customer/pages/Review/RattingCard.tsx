@@ -1,6 +1,6 @@
 import { Box, Grid, LinearProgress, Rating } from "@mui/material"
 
-const RatingCard = ({totalReview}:any) => {
+const RatingCard = () => {
     return (
         <div className="border p-5 rounded-md">
 

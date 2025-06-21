@@ -1,4 +1,4 @@
-import React from "react";
+
 import ElectronicsCategory from "./ElectronicsCategory/ElectronicsCategory";
 import CategoryGrid from "./CategoryGrid/CategoryGrid";
 import Deal from "./Deal/Deal";

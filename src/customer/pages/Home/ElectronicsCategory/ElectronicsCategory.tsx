@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
+
 import ElectronicsCategoryCard from './ElectronicsCategoryCard'
-import { useAppDispatch, useAppSelector } from '../../../../State/Store'
+import { useAppSelector } from '../../../../State/Store'
 import { useMediaQuery } from '@mui/material';
-import { fetchHomePageData } from '../../../../State/customer/homeCategorySlice';
+
 
 const ElectronicsCategory = () => {
   const {home} = useAppSelector(store=>store);

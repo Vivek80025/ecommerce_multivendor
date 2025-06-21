@@ -1,6 +1,6 @@
 import { CheckCircle, FiberManualRecord } from '@mui/icons-material';
 import { Box } from '@mui/material';
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Order } from '../../../types/orderTypes';
 
 
@@ -18,7 +18,7 @@ const formatDate = (dateString: string | Date) => {
 
 const Orderstepper = ({orderStatus,order}:{orderStatus:any; order:Order;}) => {
   
-  const [currentStep,setCurrentStep] = useState(3)
+  const [currentStep] = useState(3)
 
   const steps = [
   { 

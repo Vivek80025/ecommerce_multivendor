@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../../State/Store";
 import { searchProduct } from "../../../State/customer/ProductSlice";
 import ProductCard from "../Product/ProductCard";
@@ -31,7 +31,7 @@ const SearchProducts = () => {
       <section>
         {product.searchProduct?.length > 0 ? (
           <section className="grid sm:grid-cols-2   md:grid-cols-3 lg:grid-cols-4 gap-y-5 px-5 justify-center">
-            {product.searchProduct.map((item: any, index: number) => (
+            {product.searchProduct.map((item: any) => (
               <div className="">
                 <ProductCard item={item} />
               </div>

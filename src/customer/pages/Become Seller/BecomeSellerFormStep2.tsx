@@ -1,6 +1,5 @@
 
-import React from 'react'
-import { Box, Button, Grid, TextField } from "@mui/material";
+import { Box, Grid, TextField } from "@mui/material";
 
 const BecomeSellerFormStep2 = ({formik}:any) => {
   return (

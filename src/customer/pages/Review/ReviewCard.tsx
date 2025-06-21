@@ -1,7 +1,6 @@
 import { Delete } from "@mui/icons-material";
 import { Avatar, Box, Grid, IconButton, Rating } from "@mui/material";
 import { red } from "@mui/material/colors";
-import React from "react";
 import { Review } from "../../../types/reviewTypes";
 import { useAppDispatch, useAppSelector } from "../../../State/Store";
 import { deleteReview } from "../../../State/customer/ReviewSlice";

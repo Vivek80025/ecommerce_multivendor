@@ -1,13 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { string } from "yup";
 import { api } from "../config/Api";
 import { User } from "../types/UserType";
-import { useState } from "react";
-import { useAppSelector } from "./Store";
 
 
 export const sendLoginSignupOtp = createAsyncThunk("/auth/sendLoginSignupOtp",
-  async({email}:{email:string}, {rejectWithValue})=>{
+  async({email}:{email:string})=>{
     try{
       console.log("my resend -",email);
       const response = await api.post("/auth/sent/login-signup-otp",{email})
@@ -20,7 +17,7 @@ export const sendLoginSignupOtp = createAsyncThunk("/auth/sendLoginSignupOtp",
 )
 
 export const signin = createAsyncThunk<any,any>("/auth/signin",
-  async(loginRequest,{rejectWithValue})=>{
+  async(loginRequest)=>{
     try{
       const response = await api.post("/auth/signing",loginRequest.values)
       console.log("login jwt-",response.data)
@@ -35,7 +32,7 @@ export const signin = createAsyncThunk<any,any>("/auth/signin",
 
 
 export const signup = createAsyncThunk<any,any>("/auth/signup",
-  async(signupRequest,{rejectWithValue})=>{
+  async(signupRequest)=>{
     try{
       const response = await api.post("/auth/signup",signupRequest.values)
       console.log("signup jwt-",response.data)
@@ -49,7 +46,7 @@ export const signup = createAsyncThunk<any,any>("/auth/signup",
 )
 
 export const logout = createAsyncThunk<any,any>("/auth/logout",
-  async(navigate,{rejectWithValue})=>{
+  async(navigate)=>{
     try{
       localStorage.clear();
       console.log("logout success");
@@ -61,7 +58,7 @@ export const logout = createAsyncThunk<any,any>("/auth/logout",
 )
 
 export const fetchUserProfile = createAsyncThunk<any,any>("/auth/fetchUserProfile",
-  async({jwt},{rejectWithValue})=>{
+  async({jwt})=>{
     try{
       const response = await api.get("/users/profile",{
         headers:{
@@ -111,7 +108,7 @@ const authSlice=createSlice({
                 state.loading = false;
                 state.otpSent = true;
             })
-            .addCase(sendLoginSignupOtp.rejected, (state, action) => {
+            .addCase(sendLoginSignupOtp.rejected, (state) => {
                 state.loading = false;
             })
             .addCase(signin.fulfilled,(state,action)=>{

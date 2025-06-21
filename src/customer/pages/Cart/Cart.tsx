@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CartItem from "./CartItem";
-import { Close, Favorite, LocalOffer } from "@mui/icons-material";
+import { Close, LocalOffer } from "@mui/icons-material";
 import { teal } from "@mui/material/colors";
 import TextField from "@mui/material/TextField";
 import { Button, IconButton } from "@mui/material";
@@ -49,12 +49,8 @@ const Cart = () => {
   //snackbar
   const [open, setOpen] = React.useState(false);
 
-  const handleClick = () => {
-    setOpen(true);
-  };
-
   const handleClose = (
-    event?: React.SyntheticEvent | Event,
+    _event?: React.SyntheticEvent | Event,
     reason?: SnackbarCloseReason,
   ) => {
     if (reason === 'clickaway') {

@@ -1,5 +1,4 @@
 import { Divider, ListItemIcon, ListItemText } from "@mui/material";
-import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../State/Store";
 import { logout } from "../State/AuthSlice";
@@ -17,7 +16,7 @@ interface DrawerListProps {
   toggleDrawer: () => void;
 }
 
-const DrawerList = ({ menu, menu2, toggleDrawer }: DrawerListProps) => {
+const DrawerList = ({ menu, menu2 }: DrawerListProps) => {
   const location = useLocation();
   const navigate = useNavigate();
   const dispatch = useAppDispatch();

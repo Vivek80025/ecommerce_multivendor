@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import AdminDrawerList from '../components/AdminDrawerList'
 import AdminRoutes from '../../Routes/AdminRoutes'
 import { Alert, Snackbar } from '@mui/material';

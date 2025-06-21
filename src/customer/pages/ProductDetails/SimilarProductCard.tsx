@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+
 import { Product } from "../../../types/ProductType";
 import { useNavigate } from "react-router-dom";
 

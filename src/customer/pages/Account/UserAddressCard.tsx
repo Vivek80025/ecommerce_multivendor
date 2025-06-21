@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Address } from '../../../types/UserType'
 
 const UserAddressCard = ({item}:{item:Address}) => {

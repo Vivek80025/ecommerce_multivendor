@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../../State/Store";
 import { useFormik } from "formik";
 import { sendLoginSignupOtp, signup } from "../../../State/AuthSlice";
@@ -6,8 +6,7 @@ import { Button, CircularProgress, TextField } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 const RegisterForm = () => {
-  // const dispatch = useAppDispatch();
-  // const navigate = useNavigate();
+  
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const { auth } = useAppSelector((store) => store);
@@ -28,9 +27,6 @@ const RegisterForm = () => {
     },
   });
 
-  // const handleSendOtp = () => {
-  //   dispatch(sendLoginSignupOtp({ email: formik.values.email }));
-  // };
 
   const handleResendOTP = () => {
     // Implement OTP resend logic
@@ -141,26 +137,6 @@ const RegisterForm = () => {
             </div>
           </div>
         )}
-
-        {/* <div>
-          {false && <Button
-            onClick={handleSendOtp}
-            variant="contained"
-            fullWidth
-            sx={{ py: "11px", my: "10px" }}
-          >
-            Sent Otp
-          </Button>}
-
-          <Button
-            onClick={() => formik.handleSubmit()}
-            variant="contained"
-            fullWidth
-            sx={{ py: "11px" }}
-          >
-            Signup
-          </Button>
-        </div> */}
 
         <div>
           {auth.otpSent ? (

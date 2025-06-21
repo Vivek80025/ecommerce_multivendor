@@ -9,7 +9,7 @@ import Review from "./customer/pages/Review/Review";
 import Cart from "./customer/pages/Cart/Cart";
 import Checkout from "./customer/pages/Checkout/Checkout";
 import Account from "./customer/pages/Account/Account";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import BecomeSeller from "./customer/pages/Become Seller/BecomeSeller";
 import SellerDashbord from "./seller/pages/SellerDashbord";
 import AdminDashboard from "./admin/pages/AdminDashboard";
@@ -20,7 +20,7 @@ import Auth from "./customer/pages/Auth/Auth";
 import { fetchUserProfile } from "./State/AuthSlice";
 import PaymentSuccess from "./customer/pages/PaymentSuccess";
 import Wishlist from "./customer/pages/WishList/Wishlist";
-import { createHomeCategories, fetchHomePageData } from "./State/customer/homeCategorySlice";
+import { createHomeCategories } from "./State/customer/homeCategorySlice";
 import { homeCategories } from "./Data/homecategories";
 import WriteReview from "./customer/pages/Review/WriteReview";
 import SearchProducts from "./customer/pages/Search/SearchProducts";
@@ -30,7 +30,6 @@ import SellerAccountVerification from "./seller/pages/SellerAccountVerification"
 function App() {
 
   const {seller,auth,sellerAuthSlice} = useAppSelector(store=>store)
-  const navigate = useNavigate();
   const dispatch = useAppDispatch();
 
   useEffect(()=>{

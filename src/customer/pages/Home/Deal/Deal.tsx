@@ -1,4 +1,4 @@
-import React from "react";
+
 import DealCard from "./DealCard";
 import { useAppSelector } from "../../../../State/Store";
 

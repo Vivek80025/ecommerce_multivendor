@@ -1,7 +1,5 @@
 import { Add, Close, Remove } from "@mui/icons-material";
 import { Button, Divider, IconButton } from "@mui/material";
-import { teal } from "@mui/material/colors";
-import React, { useState } from "react";
 import { cartItem } from "../../../types/CartTypes";
 import { useAppDispatch } from "../../../State/Store";
 import { deleteCartItem, updateCartItem } from "../../../State/customer/cartSlice";

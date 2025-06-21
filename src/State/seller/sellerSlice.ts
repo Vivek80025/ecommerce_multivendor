@@ -4,7 +4,7 @@ import { Seller, SellerReport } from "../../types/SellerTypes";
 import axios from "axios";
 
 export const fetchSellerProfile = createAsyncThunk<any,any>("sellers/fetchSellerProfile", 
-  async({jwt},{rejectWithValue}) => {
+  async({jwt}) => {
     try{
       const response = api.get("/sellers/profile",{
         headers: {

@@ -1,5 +1,4 @@
 import { Divider } from '@mui/material'
-import React, { useEffect, useState } from 'react'
 import { useAppSelector } from '../../../State/Store'
 import { sumCartItemMrpPrice } from '../../../Util/sumCartItemMrpPrice'
 import { sumCartItemSellingPrice } from '../../../Util/sumCartItemSellingPrice'

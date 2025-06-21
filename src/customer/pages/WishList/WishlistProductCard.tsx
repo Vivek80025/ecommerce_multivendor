@@ -1,8 +1,7 @@
-import React from 'react'
+
 import { Product } from '../../../types/ProductType'
 import { Button } from '@mui/material'
 import { Close } from '@mui/icons-material'
-import { useDispatch } from 'react-redux'
 import { useAppDispatch } from '../../../State/Store'
 import { addProductToWishlist } from '../../../State/customer/wishlistSlice'
 import { useNavigate } from 'react-router-dom'

@@ -36,26 +36,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(
-  name: string,
-  calories: number,
-  fat: number,
-  carbs: number,
-  protein: number,
-  status: string,
-  changeStatus: string
-) {
-  return { name, calories, fat, carbs, protein, status, changeStatus };
-}
-
-const rows = [
-  createData("Frozen yoghurt", 159, 9310165706, 24, 4.0, "Active", "CHANGE STATUS"),
-  createData("Ice cream sandwich", 237, 9310165706, 37, 4.3, "Active", "CHANGE STATUS"),
-  createData("Eclair", 262, 9310165706, 24, 6.0, "Active", "CHANGE STATUS"),
-  createData("Cupcake", 305, 9310165706, 67, 4.3, "Active", "CHANGE STATUS"),
-  createData("Gingerbread", 356, 9310165706, 49, 3.9, "Active", "CHANGE STATUS"),
-];
-
 const accountStatuses = [
   {
     status: "PENDING_VERIFICATION",

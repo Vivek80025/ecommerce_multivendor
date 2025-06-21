@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./ProductCard.css"
-import { Favorite, FavoriteBorder, ModeComment, Translate } from '@mui/icons-material'
+import { Favorite, FavoriteBorder, ModeComment } from '@mui/icons-material'
 import { Button } from '@mui/material'
 import { teal } from '@mui/material/colors'
 import { Product } from '../../../types/ProductType'

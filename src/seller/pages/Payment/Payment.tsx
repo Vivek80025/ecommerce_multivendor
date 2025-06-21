@@ -1,5 +1,5 @@
 import { Button, Card, Divider } from "@mui/material";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import TransactionTable from "./TransactionTable";
 import { useAppDispatch, useAppSelector } from "../../../State/Store";
 import { fetchSellerReport } from "../../../State/seller/sellerSlice";

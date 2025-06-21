@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Route, Routes } from 'react-router-dom'
 import Dashboard from '../seller/pages/Dashboard/Dashboard'
 import Products from '../seller/pages/Products/Products'

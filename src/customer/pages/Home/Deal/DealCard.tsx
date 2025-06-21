@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { Deal } from '../../../../types/DealTypes'
 import { useNavigate } from 'react-router-dom'
 

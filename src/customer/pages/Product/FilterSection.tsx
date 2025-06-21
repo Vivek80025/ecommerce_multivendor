@@ -8,7 +8,7 @@ import {
   RadioGroup,
 } from "@mui/material";
 import { teal } from "@mui/material/colors";
-import React, { useState } from "react";
+import { useState } from "react";
 import { colors } from "../../../Data/Filter/color";
 import { price } from "../../../Data/Filter/price";
 import { discount } from "../../../Data/Filter/discount";
@@ -116,7 +116,7 @@ const FilterSection = () => {
               aria-labelledby="price"
               defaultValue=""
             >
-              {price.map((item, index) => (
+              {price.map((item) => (
                 <FormControlLabel
                   key={item.name}
                   value={item.value}
@@ -147,7 +147,7 @@ const FilterSection = () => {
               aria-labelledby="discount"
               defaultValue=""
             >
-              {discount.map((item, index) => (
+              {discount.map((item) => (
                 <FormControlLabel
                   key={item.name}
                   value={item.value}

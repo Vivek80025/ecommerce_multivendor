@@ -1,7 +1,7 @@
 import { AddPhotoAlternate, Close } from "@mui/icons-material";
 import { Box, Button, CircularProgress, IconButton, InputLabel, Rating, TextField, Typography } from "@mui/material";
-import { Formik, useFormik } from "formik";
-import React, { useState } from "react";
+import { useFormik } from "formik";
+import { useState } from "react";
 import { useAppDispatch } from "../../../State/Store";
 import { useNavigate, useParams } from "react-router-dom";
 import * as Yup from 'yup';
@@ -96,7 +96,7 @@ const ReviewForm = () => {
           id="reviewRating"
           name="reviewRating"
           value={formik.values.reviewRating}
-          onChange={(event, newValue) =>
+          onChange={( newValue) =>
             formik.setFieldValue("reviewRating", newValue)
           }
           onBlur={formik.handleBlur}

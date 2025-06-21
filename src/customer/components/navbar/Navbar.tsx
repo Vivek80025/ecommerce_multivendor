@@ -6,7 +6,7 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import React, { useState } from "react";
+import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";

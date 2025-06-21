@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { menLevelTwo } from '../../../Data/category/level two/menLevelTwo'
 import { womenLevelTwo } from '../../../Data/category/level two/womenLevelTwo'
 import { furnitureLevelTwo } from '../../../Data/category/level two/furnitureLevleTwo'
@@ -24,7 +24,7 @@ const categoryTwo:{[key: string]: any[]} ={
   electronics:electronicsLevelTwo,
 }
 
-const CategorySheet = ({selectedCategory,showCategorySheet}:any) => {
+const CategorySheet = ({selectedCategory}:any) => {
   const navigate = useNavigate();
   //flex-wrap:-if the children don't fit in a row, they wrap onto the next line
   const childCategory = (category:any,parentCategoryId:any) => {

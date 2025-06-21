@@ -10,7 +10,6 @@ import {
   Typography,
 } from "@mui/material";
 import { useFormik } from "formik";
-import React from "react";
 import { useAppDispatch, useAppSelector } from "../../../State/Store";
 import { createDeal } from "../../../State/admin/DealSlice";
 

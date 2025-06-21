@@ -1,9 +1,7 @@
-import React from 'react'
+
 import "./ShopByCategoryCard.css"
-import { HomeCategory, HomeData } from '../../../../types/HomeCategoryTypes'
+import { HomeCategory} from '../../../../types/HomeCategoryTypes'
 import { useNavigate } from 'react-router-dom'
-import { useAppDispatch } from '../../../../State/Store'
-import { searchProduct } from '../../../../State/customer/ProductSlice'
 
 const ShopByCategoryCard = ({item}:{item:HomeCategory}) => {
   const navigate = useNavigate()

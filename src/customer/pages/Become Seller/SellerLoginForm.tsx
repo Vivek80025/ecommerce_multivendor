@@ -1,6 +1,6 @@
 import { Box, Button, CircularProgress, TextField } from "@mui/material";
 import { useFormik } from "formik";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../../State/Store";
 import { sendLoginSignupOtp } from "../../../State/AuthSlice";
 import { sellerLogin } from "../../../State/seller/sellerAuthSlice";

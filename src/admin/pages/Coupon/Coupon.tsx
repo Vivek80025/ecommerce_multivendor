@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -8,7 +8,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { IconButton } from '@mui/material';
-import { Delete, DeleteOutline } from '@mui/icons-material';
+import {DeleteOutline } from '@mui/icons-material';
 import { useAppDispatch, useAppSelector } from '../../../State/Store';
 import { deleteCoupon, fetchAllCoupons } from '../../../State/admin/AdminCouponSlice';
 

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import SimilarProductCard from './SimilarProductCard'
 import { useAppSelector } from '../../../State/Store'
 

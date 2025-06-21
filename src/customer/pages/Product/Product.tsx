@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import FilterSection from "./FilterSection";
 import ProductCard from "./ProductCard";
-import { Box, Divider, IconButton, useMediaQuery, useTheme, Pagination, useScrollTrigger } from "@mui/material";
-import { Block, FilterAlt } from "@mui/icons-material";
+import { Box, Divider, IconButton, useMediaQuery, useTheme, Pagination } from "@mui/material";
+import { FilterAlt } from "@mui/icons-material";
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 import { useAppDispatch, useAppSelector } from "../../../State/Store";
 import { fetchAllProducts } from "../../../State/customer/ProductSlice";
 import { useParams, useSearchParams } from "react-router-dom";
@@ -34,7 +34,7 @@ level 3 - gaming_laptops
   const [sort,setSort] = useState("")
   const [page,setPage] = useState(1)
 // It is used to read and modify the query string parameters in the URL.
-  const [searchParams,setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
 
   //If the user navigates to /products/shoes, then category === "shoes"
   const {category} = useParams();
@@ -53,7 +53,6 @@ level 3 - gaming_laptops
     const [minPrice,maxPrice] = searchParams.get("price")?.split("-") || [];
     const color = searchParams.get("color");
     const minDiscount = searchParams.get("discount")?Number(searchParams.get("discount")):undefined;
-    const pageNumber = page-1;
 
     const newFilter = {
       color:color || "",
@@ -124,7 +123,7 @@ level 3 - gaming_laptops
 
           <div className="flex items-center justify-center py-10">
               <Pagination
-               onChange={(e,value)=>handlePageChange(value)}
+               onChange={(_e,value)=>handlePageChange(value)}
                count={10}
                color="primary"
                variant="outlined" />

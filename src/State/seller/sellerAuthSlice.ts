@@ -17,7 +17,7 @@ const initialState: SellerAuthState = {
 };
 
 export const sellerLogin = createAsyncThunk<any,any>("/sellerAuth/sellerLogin",
-  async(loginRequest, {rejectWithValue})=>{
+  async(loginRequest)=>{
     try{
 
       console.log("---------------"+"("+loginRequest.email+","+loginRequest.otp+")")
@@ -86,7 +86,7 @@ const sellerAuthSlice = createSlice({
                 state.loading = true;
                 state.error = null;
             })
-            .addCase(createSeller.fulfilled, (state, action) => {
+            .addCase(createSeller.fulfilled, (state) => {
                 // state.sellers.push(action.payload);
                 state.sellerCreated = "verification email sent to you"
                 state.loading = false;

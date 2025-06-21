@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import StarIcon from "@mui/icons-material/Star";
 import { teal } from "@mui/material/colors";
 import { Button, Divider } from "@mui/material";
@@ -194,10 +194,10 @@ const ProductDetails = () => {
           <div className="ratings w-full mt-10">
             <h1 className="font-semibold text-lg pb-4">Review & Ratings</h1>
 
-            <RatingCard totalReview={review.reviews.length} />
+            <RatingCard />
             <div className="mt-10">
               <div className="space-y-5">
-                {review.reviews.map((item, i) => (
+                {review.reviews.map((item) => (
                   <div className="space-y-5">
                     <ReviewCard item={item} />
                     <Divider />

@@ -1,6 +1,4 @@
-import React from 'react'
 
-import MailIcon from "@mui/icons-material/Mail";
 import { AccountBalanceWallet, AccountBox } from "@mui/icons-material";
 import LogoutIcon from '@mui/icons-material/Logout';
 import DashboardIcon from '@mui/icons-material/Dashboard';

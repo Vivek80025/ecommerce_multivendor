@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../../../State/Store';
 import { useParams } from 'react-router-dom';
 import { fetchProductById } from '../../../State/customer/ProductSlice';
@@ -7,7 +7,7 @@ import ReviewForm from './ReviewForm';
 const WriteReview = () => {
 
   const dispatch = useAppDispatch();
-  const { product, review } = useAppSelector(store => store)
+  const { product} = useAppSelector(store => store)
 
     const { productId } = useParams()
 

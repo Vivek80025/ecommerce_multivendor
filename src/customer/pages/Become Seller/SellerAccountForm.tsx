@@ -1,6 +1,6 @@
 import { Button, CircularProgress, Step, StepLabel, Stepper } from "@mui/material";
 import { useFormik } from "formik";
-import React, { useState } from "react";
+import { useState } from "react";
 import BecomeSellerFormStep1 from "./BecomeSellerFormStep1";
 import BecomeSellerFormStep2 from "./BecomeSellerFormStep2";
 import BecomeSellerFormStep3 from "./BecomeSellerFormStep3";
@@ -74,7 +74,7 @@ const SellerAccountForm = () => {
   return (
     <div>
       <Stepper activeStep={activeStep} alternativeLabel>
-        {steps.map((label, index) => (
+        {steps.map((label) => (
           <Step key={label}>
             <StepLabel>{label}</StepLabel>
           </Step>

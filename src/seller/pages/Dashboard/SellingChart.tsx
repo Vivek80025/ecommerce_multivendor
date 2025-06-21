@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { useAppDispatch, useAppSelector } from '../../../State/Store';
 import { fetchRevenueChart } from '../../../State/seller/revenueChartSlice';
