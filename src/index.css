@@ -1,0 +1,20 @@
+
+@import "tailwindcss";
+
+* {
+  border-color: #D1D5DB;
+}
+
+
+.logo{
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color:var(--color-primary-color) ;
+}
+
+@theme{
+  --color-primary-color: #00927c;
+  --color-secondary-color: #EAF0F1;
+}
+
