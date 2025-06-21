@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import OrderItem from './OrderItem'
-import store, { useAppDispatch, useAppSelector } from '../../../State/Store'
+import { useAppDispatch, useAppSelector } from '../../../State/Store'
 import { fetchUserOrderHistory } from '../../../State/customer/orderSlice';
 
 const Orders = () => {
