@@ -40,6 +40,9 @@ const ProductCard = ({item}:{item:Product}) => {
     e.stopPropagation();
     dispatch(addProductToWishlist({productId:Number(item.id)}))
   }
+  const handleAI=(e:any)=>{
+    e.stopPropagation();
+  }
   return (
     <>
     <div onClick={()=>navigate(`/product-details/${item.category?.categoryId}/${item.title}/${item.id}`)} className='group px-4 relative'>
@@ -63,7 +66,7 @@ const ProductCard = ({item}:{item:Product}) => {
                   <FavoriteBorder sx={{ color: teal[500] }} />
                 )}
             </Button>
-            <Button variant='contained' color='secondary'>
+            <Button onClick={handleAI} variant='contained' color='secondary'>
               <ModeComment sx={{color:teal[500]}}/>
             </Button>
           </div>

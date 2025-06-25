@@ -115,11 +115,36 @@ level 3 - gaming_laptops
 
           <Divider sx={{mb: 2}} />
 
-          <section className="product_section grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-5 px-5 ">
+          {product.products.length>0 ? (
+
+            <section className="product_section grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-5 px-5 ">
             {product.products.map((item)=><div key={item.id} className="object-cover">
               <ProductCard item={item} />
               </div>)}
           </section>
+
+
+          ):(
+
+            <section className="items-center flex flex-col gap-5 justify-center h-[67vh] border">
+              <img
+                className="w-80"
+                src="https://cdn.pixabay.com/photo/2022/05/28/10/45/oops-7227010_960_720.png"
+                alt=""
+              />
+              <h1 className="font-bold text-xl text-center flex items-center gap-2">
+                Product Not Found For{" "}
+                <p className="text-primary-color flex gap-2 uppercase">
+                  {" "}
+                  {category?.split("_").map((item) => (
+                    <span>{item}</span>
+                  ))}{" "}
+                </p>{" "}
+              </h1>
+            </section>
+
+
+          )}
 
           <div className="flex items-center justify-center py-10">
               <Pagination
