@@ -19,7 +19,7 @@ const PricingCard = () => {
         </div>
         <div className='flex justify-between items-center'>
           <span>Shipping</span>
-          <span>₹ 79</span>
+          <span>₹ 0</span>
         </div>
         <div className='flex justify-between items-center'>
           <span>plateform fee</span>
@@ -31,7 +31,7 @@ const PricingCard = () => {
 
         <div className='flex justify-between items-center p-5 text-primary-color'>
           <span>Total</span>
-          <span>₹ {Number(cart.cart?.totalSellingPrice) + 79}</span>
+          <span>₹ {Number(cart.cart?.totalSellingPrice) + 0}</span>
         </div>
     </>
   )
